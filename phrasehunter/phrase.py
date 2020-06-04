@@ -11,7 +11,7 @@ class Phrase:
         
     def all_guessed(self):
         for letter in self.phrase:
-            if letter.was_guessed == Flase:
+            if letter.was_guessed == False:
                 return False
         return True
     
