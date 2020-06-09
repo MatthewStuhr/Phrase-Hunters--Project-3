@@ -1,19 +1,19 @@
 # Create your Character class logic in here.
 class Character:
-    def __init__(self, char, was_guessed=False):
+    """Responsible for holding the state of a char (guessed character)"""
+    def __init__(self, char, was_guessed = False):
         self.char = char.upper()
         self.was_guessed = was_guessed
-        
-    
-    def guessed(self, guess):
-        if self.was_guessed == Flase and guess == self.char:
+
+    def update_guessed(self, guess):
+        if self.was_guessed == False and guess == self.char:
             self.was_guessed = True
-            
-    def single_character(self):
-        title = '{}'
+
+    def show_single_character(self):
+        tile = '{}'
         if self.was_guessed == True:
-            return title.format(self.char)
+            return tile.format(self.char)
         elif self.char == ' ':
-            return title.format(' ')
+            return tile.format(' ')
         else:
-            return title.fomat('_')
+            return tile.format('_')
