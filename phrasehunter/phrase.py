@@ -22,7 +22,7 @@ class Phrase:
         
     def phrase_again(self):
         for character in self.phrase:
-            chracter.was_guessed = False
+            character.was_guessed = False
             
     def exists(self, user_input):
         for letter in self.phrase:
