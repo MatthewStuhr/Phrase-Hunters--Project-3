@@ -15,7 +15,7 @@ class Phrase:
                 return False
         return True
     
-    def guessed_phrase(self):
+    def show_guessed_phrase(self):
         for letter in self.phrase:
             print(letter.single_character(), end=' ')
         print(' ')
