@@ -17,7 +17,7 @@ class Phrase:
     
     def guessed_phrase(self):
         for letter in self.phrase:
-            print(letter.single_chracter(), end=' ')
+            print(letter.single_character(), end=' ')
         print(' ')
         
     def phrase_again(self):
