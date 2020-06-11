@@ -1,4 +1,3 @@
-# Create your Game class logic in here.
 import random
 import os
 
