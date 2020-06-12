@@ -1,19 +1,26 @@
-# Create your Character class logic in here.
 class Character:
-    """Responsible for holding the state of a char (guessed character)"""
-    def __init__(self, char, was_guessed = False):
-        self.char = char.upper()
+    "Defualting was_guessed to False as the character has not been guess before"
+    def __init__(self, original, was_guessed=False):
+        self.original = original
         self.was_guessed = was_guessed
-
-    def update_guessed(self, guess):
-        if self.was_guessed == False and guess == self.char:
+        
+    def new_guess(self, guess):
+        """ An instance method that will take a single string character guess as an argument when its 
+        called. The job of this instance method is to update the instance attribute storing the boolean 
+        value, if the guess character is an exact match to the instance attribute storing the original 
+        char passed in when the Character object was created. """
+        if self.was_guessed == False and guess = self.original:
             self.was_guessed = True
-
-    def show_single_character(self):
-        tile = '{}'
-        if self.was_guessed == True:
-            return tile.format(self.char)
-        elif self.char == ' ':
-            return tile.format(' ')
+            
+            
+    def given_single_character(self):
+        character = '{}'
+        """ An instance method that when called, will show the original character if the instance 
+        attribute was_guessed is True. Otherwise, the instance method should show an _ or underscore 
+        character to act as a hidden placeholder character. """
+        if self.was_guessed == True
+            return character.format(self.original)
+        elif self.original = ' ':
+            return character.format(' ')
         else:
-            return tile.format('_')
+            return character.format('_')
